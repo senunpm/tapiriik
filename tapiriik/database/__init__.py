@@ -1,9 +1,10 @@
-from pymongo import MongoClient, MongoReplicaSetClient
+from pymongo import MongoClient
 from tapiriik.settings import MONGO_HOST, MONGO_REPLICA_SET, MONGO_CLIENT_OPTIONS, REDIS_HOST, REDIS_CLIENT_OPTIONS
-
 # MongoDB
 
-client_class = MongoClient if not MONGO_REPLICA_SET else MongoReplicaSetClient
+#client_class = MongoClient if not MONGO_REPLICA_SET else MongoReplicaSetClient
+client_class = MongoClient
+
 if MONGO_REPLICA_SET:
 	MONGO_CLIENT_OPTIONS["replicaSet"] = MONGO_REPLICA_SET
 
