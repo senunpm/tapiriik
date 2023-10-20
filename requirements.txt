@@ -4,7 +4,7 @@ pytz
 lxml
 dropbox
 python-dateutil
-Django>=3.2,<4
+Django
 pycryptodome
 celery
 django-pipeline
